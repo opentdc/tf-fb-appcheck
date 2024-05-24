@@ -24,7 +24,7 @@ resource "google_project_service" "appcheck" {
 }
 
 # Create a Firebase App Check service configuration for Firebase Authentication.
-resource "google_firebase_app_check_service_config" "default" {
+resource "google_firebase_app_check_service_config" "auth" {
   project = var.project_id
   service_id = "identitytoolkit.googleapis.com"
   enforcement_mode = var.enforcement_mode
@@ -33,7 +33,7 @@ resource "google_firebase_app_check_service_config" "default" {
 }
 
 # Create a Firebase App Check service configuration for the Firestore service.
-resource "google_firebase_app_check_service_config" "default" {
+resource "google_firebase_app_check_service_config" "firestore" {
   project = var.project_id
   service_id = "firestore.googleapis.com"
   enforcement_mode = var.enforcement_mode
@@ -42,7 +42,7 @@ resource "google_firebase_app_check_service_config" "default" {
 }
 
 # Create a Firebase App Check service configuration for the Firebase Storage service.
-resource "google_firebase_app_check_service_config" "default" {
+resource "google_firebase_app_check_service_config" "storage" {
   project = var.project_id
   service_id = "firebasestorage.googleapis.com"
   enforcement_mode = var.enforcement_mode
