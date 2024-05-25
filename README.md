@@ -29,7 +29,12 @@ To get started:
     }
     ```
 
-4.  Run `terraform init && terraform apply`
+4. gcloud auth application-default set-quota-project [PROJECT_ID]
+    to avoid Error 403: Your application is authenticating by using local Application Default Credentials. The firebaseappcheck.googleapis.com
+    API requires a quota project, which is not set by default.
+    see: https://cloud.google.com/docs/authentication/troubleshoot-adc#user-creds-client-based
+  
+5.  Run `terraform init && terraform apply`
 
 
 ## Input variables
